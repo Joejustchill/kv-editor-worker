@@ -58,7 +58,7 @@ async function KV(request, env, txt = 'ADD.txt') {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KV Editor</title>
+  <title>Cloud Text Editor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -110,7 +110,7 @@ async function KV(request, env, txt = 'ADD.txt') {
 </head>
 <body>
   <div class="topbar">
-    <div>KV Editor</div>
+    <div>Cloud Text Editor</div>
     <button onclick="save()">Save</button>
   </div>
   <textarea id="editor" placeholder="Loading...">${content.replace(/</g, '&lt;')}</textarea>
