@@ -1,8 +1,3 @@
----
-
-## 🌐 完整代码（所有中文都已英文化）：
-
-```js
 export default {
     async fetch(request, env, ctx) {
         try {
