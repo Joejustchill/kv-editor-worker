@@ -42,14 +42,6 @@ A lightweight key-value based text viewer and editor built with **Cloudflare Wor
 
 ---
 
-## 📁 Project Structure
-
-kv-editor-worker/
-├── LICENSE
-├── README.md
-└── _worker.js
-
-
 ## 📜 License
 
 [MIT](./LICENSE)
