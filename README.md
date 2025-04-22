@@ -1,47 +1,68 @@
-  
-# KV Editor Worker
+# KV Text Editor for Cloudflare Workers & Pages
 
-A lightweight key-value based text viewer and editor built with **Cloudflare Workers**, **Pages**, and **KV Storage**.
+A lightweight, self-hosted text storage and editing interface built with **Cloudflare Workers**, **Pages**, and **KV Storage**.  
+It allows users to view and edit a single text file directly from the browser.
 
-## ✨ Features
+## 🌐 Live Demo
 
+- View content: `https://editordemo.pages.dev/`
+- Edit content: `https://editordemo.pages.dev/edit`
+
+## 🧩 Features
 - 📄 View previously saved text at `/`
 - ✍️ Edit and save text via `/edit`
 - 💾 Persistent storage using Cloudflare KV
 - ⚡ Blazing fast and free to host via Cloudflare Pages
+- 💡Inline auto-save (with debounce)
+- 🗂️Responsive and minimal design
+
+
+## 🚀 Deployment Instructions
+
+### 1. Create the KV Namespace
+
+- Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+- Create a new KV namespace
+- Use the name `TXTKV` (or any name you prefer)
+- **Bind the namespace** in `pages > functions` with the binding name: `TXTKV`
+
+### 2. Deploy via Pages Functions
+
+- Upload the `_worker.js` file to your Cloudflare Pages project in the `functions` directory
+- Structure:
+📁 your-project/
+├── functions/
+│   └── _worker.js
+├── README.md
+└── wrangler.toml (if needed)
+
+- Publish the project via Pages
+
+### 3. Usage
+
+- Go to `https://your-pages-domain.com` to view the text
+- Go to `https://your-pages-domain.com/edit` to edit and save the content
+
+## 🛠 Tech Stack
+
+- Cloudflare Workers
+- Cloudflare Pages
+- Workers KV Storage
+- Vanilla HTML, CSS, JavaScript
+
+## 📌 Upcoming Features (Planned)
+
+- 🧾 Version history / content backups
+- 🧑‍💻 Password-protected edit access
+- 🌐 Multi-file support (switch between different texts)
+- ☁️ Import/export options (txt / md)
+- 📱 Better mobile UI adaptation
+- 🗂️ Tag or categorize saved texts
+
+## 📄 License
+
+This project is licensed under the MIT License. See [MIT](./LICENSE)for details.
 
 ---
 
-## 🚀 Deployment Steps
-
-### 1. Upload to Cloudflare Pages
-
-- Copy the `src/index.js` file as `_worker.js`
-- Upload `_worker.js` to a new Cloudflare Pages project using the **"Functions"** feature
-
-### 2. Create a KV Namespace
-
-- Go to your Cloudflare dashboard → **Workers** → **KV**
-- Click **"Create namespace"**
-- Name it `TXTKV` (or any name you prefer)
-
-### 3. Bind the KV Namespace to your Pages Project
-
-- Go to **Pages** → Your project → **Settings** → **Functions** → **KV bindings**
-- Add a new KV binding:
-  - **Binding name**: `TXTKV`
-  - **KV namespace**: Select the one you just created
-
----
-
-## 💡 Usage
-
-- Visit `https://<your-pages-domain>/` to view the current saved text
-- Visit `https://<your-pages-domain>/edit` to open the editor
-- Text updates are stored in KV storage under the key `"txt"`
-
----
-
-## 📜 License
-
-[MIT](./LICENSE)
+Made with ☁️ by Joejustchill
