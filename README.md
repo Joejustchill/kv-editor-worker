@@ -66,6 +66,7 @@ It allows users to view and edit a single text file directly from the browser.
   <summary>Click to view the changelog</summary>
 
 - **2.0.0** (2025-05-07):
+  
   ✨ Features
 	•	Added error handling with try-catch in all core functions.
 	•	Introduced a top bar with title and Save button.
