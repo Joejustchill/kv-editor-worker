@@ -3,23 +3,6 @@
 A lightweight, self-hosted text storage and editing interface built with **Cloudflare Workers**, **Pages**, and **KV Storage**.  
 It allows users to view and edit a single text file directly from the browser.
 
-## 📋 Changelog
-
-✨ Features
-	•	Added error handling with try-catch in all core functions.
-	•	Introduced a top bar with title and Save button.
-	•	Auto-save after 5s of inactivity or on blur.
-	•	Visual status updates (Editing…, Saved ✔️, Failed ❌).
-
-🎨 UI Improvements
-	•	Dark theme with modern styling.
-	•	Monospace font and padding for better editing experience.
-	•	Styled buttons with hover effects.
-
-🛠️ Enhancements
-	•	Unified KV namespace checks.
-	•	Escaped < in text content to avoid HTML issues.
-	•	Cleaner separation between backend logic and frontend UI.
  
 ## 🌐 Live Demo
 
@@ -76,6 +59,29 @@ It allows users to view and edit a single text file directly from the browser.
 - ☁️ Import/export options (txt / md)
 - 📱 Better mobile UI adaptation
 - 🗂️ Tag or categorize saved texts
+
+## 🔄 Changelog
+
+<details>
+  <summary>Click to view the changelog</summary>
+- **2.0** (2025-05-07): 
+✨ Features
+	•	Added error handling with try-catch in all core functions.
+	•	Introduced a top bar with title and Save button.
+	•	Auto-save after 5s of inactivity or on blur.
+	•	Visual status updates (Editing…, Saved ✔️, Failed ❌).
+
+🎨 UI Improvements
+	•	Dark theme with modern styling.
+	•	Monospace font and padding for better editing experience.
+	•	Styled buttons with hover effects.
+
+🛠️ Enhancements
+	•	Unified KV namespace checks.
+	•	Escaped < in text content to avoid HTML issues.
+	•	Cleaner separation between backend logic and frontend UI.
+- **1.0.0** (2025-04-06): Initial Release
+</details>
 
 ## 📄 License
 
